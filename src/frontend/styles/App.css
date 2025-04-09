@@ -1,0 +1,282 @@
+"""
+CSS styles for the Ashus AI frontend application.
+"""
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.app-header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.app-header p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.tasks-section,
+.agents-section {
+  margin-bottom: 2rem;
+}
+
+.tasks-section h2,
+.agents-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.tasks-list,
+.agents-list {
+  list-style: none;
+}
+
+.task-item,
+.agent-item {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.task-status {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.task-status.pending {
+  color: #ffc107;
+}
+
+.task-status.running {
+  color: #17a2b8;
+}
+
+.task-status.completed {
+  color: #28a745;
+}
+
+.task-status.failed {
+  color: #dc3545;
+}
+
+.task-description {
+  font-size: 0.9rem;
+}
+
+.agent-name {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.agent-status {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* Chat container */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.ai-message {
+  align-self: flex-start;
+  background-color: #e9ecef;
+  color: #333;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.system-message {
+  align-self: center;
+  background-color: #ffc107;
+  color: #333;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.message-content {
+  word-break: break-word;
+}
+
+.message-timestamp {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-indicator span {
+  animation: loading 1.4s infinite ease-in-out both;
+  font-size: 1.5rem;
+}
+
+.loading-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* Input form */
+.input-form {
+  display: flex;
+  margin-top: 1rem;
+  border-top: 1px solid #dee2e6;
+  padding-top: 1rem;
+}
+
+.input-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.input-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.input-form button:hover {
+  background-color: #0069d9;
+}
+
+.input-form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.app-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+}
