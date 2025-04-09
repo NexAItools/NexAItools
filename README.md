@@ -2,6 +2,13 @@
 
 NexAItools is an open-source AI system with capabilities similar to Manus AI, featuring a multi-agent architecture, tool integration, and web/CLI interfaces.
 
+## About Me
+- 👋 Hi, I'm @NexAItools
+- 👀 I'm interested in AI systems, multi-agent architectures, and tool integration
+- 🌱 I'm currently learning advanced orchestration techniques for AI agents
+- 💞️ I'm looking to collaborate on open source AI projects
+- 📫 How to reach me: Through GitHub issues and discussions
+
 ## Features
 
 - Multi-agent architecture for complex task handling
@@ -161,3 +168,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Copyright
 
 All copyright and intellectual property rights for the NexAItools project are owned by you. See [COPYRIGHT.md](COPYRIGHT.md) for detailed information.
+
+## Fun Fact
+⚡ NexAItools combines the power of multiple specialized AI agents to solve complex tasks that would be difficult for a single agent to handle!
